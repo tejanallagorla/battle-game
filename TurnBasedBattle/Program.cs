@@ -4,7 +4,12 @@ Random random = new Random();
 Unit player = new Unit("Player", 100, 12, 8);
 Unit enemy = new Unit("Enemy Bandit", 75, 15, 3);
 
-
+Console.WriteLine("Welcome to battle-game!");
+Thread.Sleep(1500);
+Console.WriteLine("In this world, you're a common villager on an adventure.");
+Thread.Sleep(1500);
+Console.WriteLine("Fight the obstacles in your way to quench your thirst for glory!");
+Thread.Sleep(1500);
 
 while(!player.IsDead && !enemy.IsDead)
 {
