@@ -29,11 +29,17 @@ namespace TurnBasedBattle
 
         public void Attack(Unit unitToAttack)
         {
-            double rng = random.NextDouble();
-            rng = rng / 2 + 0.75f;
-            int randDamage = (int)(attackPower * rng);
-            Console.WriteLine(unitName + " attacks " + unitToAttack.unitName + " and deals " + randDamage + " damage!");
-            unitToAttack.TakeDamage(randDamage);
+            int rng = random.Next(0, 5);
+            int newDamage = attackPower;
+            if(rng == 2)
+            {
+                int critBonus = random.Next(3, 6);
+                newDamage += critBonus;
+                Console.WriteLine(unitName + " lands a critical hit on " + unitToAttack.unitName + "! The attack deals " + newDamage + " damage!");
+            }
+            else
+                Console.WriteLine(unitName + " attacks " + unitToAttack.unitName + " and deals " + newDamage + " damage!");
+            unitToAttack.TakeDamage(newDamage);
         }
 
         public void TakeDamage(int damage)

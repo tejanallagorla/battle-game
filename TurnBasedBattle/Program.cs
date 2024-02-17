@@ -1,8 +1,10 @@
 ﻿using TurnBasedBattle;
 
 Random random = new Random();
-Unit player = new Unit("Player", 100, 15, 8);
-Unit enemy = new Unit("Enemy Bandit", 75, 12, 6);
+Unit player = new Unit("Player", 100, 12, 8);
+Unit enemy = new Unit("Enemy Bandit", 75, 15, 3);
+
+
 
 while(!player.IsDead && !enemy.IsDead)
 {
@@ -46,9 +48,9 @@ while(!player.IsDead && !enemy.IsDead)
 
         Console.WriteLine();
 
-        int rand = random.Next(0, 2);
+        int rand = random.Next(0, 3);
 
-        if (rand == 0 || enemy.CurHp == enemy.MaxHp)
+        if (rand == 0 || rand == 1 || enemy.CurHp == enemy.MaxHp)
             enemy.Attack(player);
         else
             enemy.Heal();
