@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 
 namespace TurnBasedBattle
 {
@@ -11,8 +12,9 @@ namespace TurnBasedBattle
         private int healPower;
         private Random random;
 
-        public int Hp { get { return currentHp; } }
-        public string UnitName { get { return unitName; } }
+        public string UName { get { return unitName; } }
+        public int CurHp { get { return currentHp; } }
+        public int MaxHp { get { return maxHp; } }
         public bool IsDead { get { return currentHp <= 0; } }
 
         public Unit(string unitName, int maxHp, int attackPower, int healPower)
