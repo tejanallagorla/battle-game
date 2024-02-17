@@ -41,7 +41,7 @@ namespace TurnBasedBattle
             currentHp -= damage;
             
             if(IsDead)
-                Console.WriteLine(unitName + " has been defeated!");
+                Console.WriteLine("\n" + unitName + " has been defeated!");
         }
 
         public void Heal()

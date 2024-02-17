@@ -56,3 +56,8 @@ while(!player.IsDead && !enemy.IsDead)
         Console.WriteLine();
     }
 }
+
+if(player.IsDead)
+    Console.WriteLine("You lost :(");
+else
+    Console.WriteLine("You won!!!");
