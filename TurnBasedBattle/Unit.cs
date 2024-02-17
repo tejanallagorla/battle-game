@@ -58,5 +58,29 @@ namespace TurnBasedBattle
                 currentHp += healPower;
             Console.WriteLine(unitName + " heals " + healPower + " HP.");
         }
+
+        public void UpgradeMaxHp()
+        {
+            maxHp += 25;
+            Console.WriteLine(unitName + "'s max HP has been increased by 25!");
+        }
+
+        public void UpgradeAttackPower()
+        {
+            attackPower += 3;
+            Console.WriteLine(unitName + "'s attack power has been increased by 3!");
+        }
+
+        public void UpgradeHealPower()
+        {
+            healPower += 4;
+            Console.WriteLine(unitName + "'s heal power has been increased by 4!");
+        }
+
+        public void FullHeal()
+        {
+            currentHp = maxHp;
+            Console.WriteLine(unitName + "'s HP has been fully restored!\n");
+        }
     }
 }
