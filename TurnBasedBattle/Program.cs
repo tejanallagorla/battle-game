@@ -52,5 +52,7 @@ while(!player.IsDead && !enemy.IsDead)
             enemy.Attack(player);
         else
             enemy.Heal();
+        
+        Console.WriteLine();
     }
 }
