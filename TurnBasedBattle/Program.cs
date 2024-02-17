@@ -11,7 +11,7 @@ while(!player.IsDead && !enemy.IsDead)
     Console.WriteLine(player.UName + "'s turn! Will you attack or heal?");
     string choice = Console.ReadLine();
 
-    Console.WriteLine("\n");
+    Console.WriteLine();
 
     if(choice == "attack")
         player.Attack(enemy);
@@ -24,6 +24,7 @@ while(!player.IsDead && !enemy.IsDead)
         {
             Console.WriteLine("That move is invalid! Please enter either 'attack' or 'heal'. What would you like to do?");
             choice = Console.ReadLine();
+            Console.WriteLine();
             if(choice == "attack" || choice == "heal")
                 validTurn = true;
         }
@@ -36,14 +37,14 @@ while(!player.IsDead && !enemy.IsDead)
 
     if(!enemy.IsDead)
     {
-        Console.WriteLine("\n");
+        Console.WriteLine();
 
         Console.WriteLine(player.UName + " HP = " + player.CurHp + ".");
         Console.WriteLine(enemy.UName + " HP = " + enemy.CurHp + ".");
         Console.WriteLine("Waiting for " + enemy.UName + " to make a move...");
         Thread.Sleep(3000);
 
-        Console.WriteLine("\n");
+        Console.WriteLine();
 
         int rand = random.Next(0, 2);
 
