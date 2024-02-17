@@ -48,7 +48,7 @@ namespace TurnBasedBattle
                 currentHp = maxHp;
             else
                 currentHp += healPower;
-            Console.WriteLine(unitName + " heals " + healPower + ".");
+            Console.WriteLine(unitName + " heals " + healPower + " HP.");
         }
     }
 }
